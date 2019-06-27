@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Eat Da Burger</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../public/assets/css/burger_style.css" type="text/css" />
 </head>
 
@@ -21,13 +22,37 @@
             <div class="row text-center">
                 <div class="col-sm-12">
                     <h2>Create Da Burger</h2>
-                    <form class="create-form">
+                    <form class="create-form" action="/api/burgers" method="POST">
                         <div class="form-group">
-                            <label for="da-burger">Burger Creation Factory</label><br>
-                            <input type="text" id="da-burger" name="burger">
+                            <label for="da-burger">Dream Da Burger</label><br>
+                            <input type="text" id="da-burger" name="name">
                         </div>
                         <button type="submit">Cook Da Burger</button>
                     </form>
+                </div>
+            </div>
+        </section>
+        <section class="col-sm-5" id="burger-display">
+            <div class="row text-center">
+                <div class="col-sm-6">
+                    <h2>See Da Burger</h2>
+                    <!-- <ul>
+                        {{#each burgers}}
+                        {{#unless devoured}}
+                        <li>{{burger_name}}</li>
+                        {{/unless}}
+                        {{/each}}
+                    </ul> -->
+                </div>
+                <div class="col-sm-6">
+                    <h2>Digest Da Burger</h2>
+                    <!-- <ul>
+                        {{#each burgers}}
+                        {{#if devoured}}
+                        <li>{{burger_name}}</li>
+                        {{/if}}
+                        {{/each}}
+                    </ul> -->
                 </div>
             </div>
         </section>
