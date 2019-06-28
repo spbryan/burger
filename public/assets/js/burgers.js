@@ -5,7 +5,6 @@
  ***********************************************/
 $(function () {
     $(".eat-burger").on("click", function (event) {
-        console.log("eatin da burger");
         var id = $(this).data("id");
 
         var eatenBurger = {
@@ -19,6 +18,21 @@ $(function () {
         }).then(
             function () {
                 console.log("changed eaten status to", true);
+                location.reload();
+            }
+        );
+    });
+
+    $(".delete-burger").on("click", function (event) {
+        console.log("poopin da burger");
+        var id = $(this).data("id");
+
+        // Send the DELETE request.
+        $.ajax("/api/burgers/" + id, {
+            type: "DELETE"
+        }).then(
+            function () {
+                console.log("Delete the burger entry");
                 location.reload();
             }
         );
