@@ -1,3 +1,25 @@
+body {
+    /* background-image: url(../img/burger_bg1.jpg); */
+    /* background-image: url(../img/burger_bg2.jpg); */
+    /* background-image: url(../img/burger_bg3.jpg); */
+    background-image: url(../img/burger_bg4.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 ul {
     list-style: none;
+}
+
+a:hover{ 
+    background-color: blue;
+    cursor: pointer;
+}
+
+#plate-img {
+    height: 300px;
+}
+
+#tummy-img {
+    height: 300px;
 }

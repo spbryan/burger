@@ -21,22 +21,47 @@
     <section id="burger-display">
         <div class="row text-center">
             <div class="col-sm-6">
-                <h2>See Da Burger</h2>
-                <ul>
-                    {{#each burgers}}
-                    {{#unless this.devoured}}
-                    <li>
-                        {{this.burger_name}}
-                        <button class="eat-burger" data-id="{{id}}">
-                            Eat-Da-Burger
-                        </button>
-                    </li>
-                    {{/unless}}
-                    {{/each}}
-                </ul>
+                <div class="card mt-6" style="width: 90%;">
+                    <img class="card-img-top" id="plate-img" src="/assets/img/plate1.jpg" alt="Plate Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Eat-Da-Burger</h5>
+                        <ul>
+                            {{#each burgers}}
+                            {{#unless this.devoured}}
+                            {{!-- <li> --}}<p>
+                                {{!-- <a class="eat-burger" data-id="{{id}}"> --}}
+                                {{this.burger_name}}
+                                {{!-- </a> --}}
+                                <button class="eat-burger" data-id="{{id}}">
+                                    Um-Num!
+                                </button>
+                            {{!-- </li> --}}</p>
+                            {{/unless}}
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-6">
-                <h2>Digest Da Burger</h2>
+                <div class="card mt-6" style="width: 90%;">
+                    <img class="card-img-top" id="tummy-img" src="/assets/img/stomach1.jpg" alt="Tummy Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Digest-Da-Burger</h5>
+                        <ul>
+                            {{#each burgers}}
+                            {{#if this.devoured}}
+                            <li>
+                                {{this.burger_name}}
+                                <button class="delete-burger" data-id="{{id}}">
+                                    Burp!
+                                </button>
+                            </li>
+                            {{/if}}
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+                {{!-- <h2>Digest Da Burger</h2>
                 <ul>
                     {{#each burgers}}
                     {{#if this.devoured}}
@@ -48,7 +73,7 @@
                     </li>
                     {{/if}}
                     {{/each}}
-                </ul>
+                </ul> --}}
             </div>
         </div>
     </section>
