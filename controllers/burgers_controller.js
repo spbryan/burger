@@ -27,7 +27,9 @@ router.post("/api/burgers", function(req, res) {
     ], [
         req.body.name, false
     ], function(result) {
-        res.json({ id: result.insertId});
+        // res.json({ id: result.insertId});
+        res.redirect('back');
+        // res.render("index", allBurgers);
     });
 });
 
