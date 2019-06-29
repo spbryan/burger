@@ -1,42 +1,48 @@
 <section class="container">
-    {{!-- <section class="row text-center mt-1">
-        <div class="col-sm-12" id="header">
-            <h1>Eat Da Burger</h1>
+    <section class="row text-center mt-1">
+        <div class="col-sm-12 mb-3" id="header">
+            <h1>Eat-Da-Burger</h1>
         </div>
-    </section> --}}
+    </section>
     <section id="burger-input">
         <div class="row text-center">
-            <div class="col-sm-12">
-                <div class="jumbotron jumbotron-fluid">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                {{!-- <div class="jumbotron jumbotron-fluid">
                     <div class="container">
-                        <h1 class="display-4">Eat-Da-Burger</h1>
                         <form class="create-form" action="/api/burgers" method="POST">
                             <div class="form-group">
-                                <label for="da-burger">Dream Da Burger</label><br>
-                                <input type="text" id="da-burger" name="name">
+                                <h3 class="card-title">Dream-Da-Burger</h3>
+                                <br>
+                                <input type="text" id="da-burger" name="name" size="50" maxlength="255">
                             </div>
-                            <button type="submit">Cook Da Burger</button>
+                            <button type="submit">Cook-Da-Burger</button>
                         </form>
                     </div>
-                </div>
-                {{!-- <h2>Create Da Burger</h2>
-                <form class="create-form" action="/api/burgers" method="POST">
-                    <div class="form-group">
-                        <label for="da-burger">Dream Da Burger</label><br>
-                        <input type="text" id="da-burger" name="name">
+                </div> --}}
+                <div class="card mt-3 mb-3" id="dream-burger" style="width: 100%;">
+                    <div class="card-body">
+                        <form class="create-form" action="/api/burgers" method="POST">
+                            <div class="form-group">
+                                <h3 class="card-title">Dream-Da-Burger</h3>
+                                <br>
+                                <input type="text" id="da-burger" name="name" size="auto" maxlength="255">
+                            </div>
+                            <button type="submit">Cook-Da-Burger</button>
+                        </form>                   
                     </div>
-                    <button type="submit">Cook Da Burger</button>
-                </form> --}}
+                </div>
             </div>
+            <div class="col-sm-4"></div>
         </div>
     </section>
     <section id="burger-display">
         <div class="row text-center">
             <div class="col-sm-6">
-                <div class="card mt-6" style="width: 100%;">
-                    <img class="card-img-top" id="plate-img" src="/assets/img/plate1.jpg" alt="Plate Image">
+                <div class="card mt-3" style="width: 100%;">
+                    <img class="card-img-top" id="plate-img" src="/assets/img/eat-burger1.jpg" alt="Plate Image">
                     <div class="card-body">
-                        <h5 class="card-title">Eat-Da-Burger</h5>
+                        <h3 class="card-title">Eat-Da-Burger</h3>
                         <ul>
                             {{#each burgers}}
                             {{#unless this.devoured}}
@@ -55,10 +61,10 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                <div class="card mt-6" style="width: 100%;">
-                    <img class="card-img-top" id="tummy-img" src="/assets/img/stomach1.jpg" alt="Tummy Image">
+                <div class="card mt-3" style="width: 100%;">
+                    <img class="card-img-top" id="tummy-img" src="/assets/img/burp3.jpg" alt="Tummy Image">
                     <div class="card-body">
-                        <h5 class="card-title">Digest-Da-Burger</h5>
+                        <h3 class="card-title">Digest-Da-Burger</h3>
                         <ul>
                             {{#each burgers}}
                             {{#if this.devoured}}

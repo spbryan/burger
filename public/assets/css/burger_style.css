@@ -1,10 +1,21 @@
 body {
     /* background-image: url(../img/burger_bg1.jpg); */
-    /* background-image: url(../img/burger_bg2.jpg); */
-    /* background-image: url(../img/burger_bg3.jpg); */
-    background-image: url(../img/burger_bg4.jpg);
+    background-image: url(../img/burger_bg2.jpg);
+    /* background-image: url(../img/burger_bg4.jpg); */
     background-attachment: fixed;
     background-size: cover;
+}
+
+h1, h3 {
+    /* font-family: 'Barriecito', cursive; */
+    /* font-family: 'Francois One', sans-serif; */
+    
+    font-family: 'Permanent Marker', cursive;
+    /* font-family: 'Gloria Hallelujah', cursive; */
+    /* font-family: 'Alfa Slab One', cursive; */
+    /* font-family: 'Luckiest Guy', cursive; */
+    /* font-family: 'Ultra', serif; */
+    /* font-family: 'Coiny', cursive; */
 }
 
 ul {
@@ -14,6 +25,18 @@ ul {
 a:hover{ 
     background-color: blue;
     cursor: pointer;
+}
+
+#dream-burger {
+    /* background-image: url(../img/burger_bg2.jpg); */
+    background-image: url(../img/burger_bg4.jpg);
+    background-size: cover;
+    color: #c5331b;
+}
+
+#header h1{
+    color: #ffc100;
+    font-size: 60px;
 }
 
 #plate-img {
