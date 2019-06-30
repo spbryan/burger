@@ -18,6 +18,10 @@ h1, h3 {
     /* font-family: 'Coiny', cursive; */
 }
 
+p {
+    font-family: 'Coiny', cursive; 
+}
+
 ul {
     list-style: none;
 }
@@ -27,19 +31,49 @@ a:hover{
     cursor: pointer;
 }
 
+.burger-button {
+    margin: 0 5px;
+    color: rgb(255, 255, 255); 
+    font-size: 16px; 
+    line-height: 16px; 
+    padding: 6px; 
+    border-radius: 10px; 
+    /* font-family: Georgia, serif;  */
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: normal; 
+    text-decoration: none; 
+    font-style: normal; 
+    font-variant: normal; 
+    text-transform: none; 
+    box-shadow: rgb(0, 0, 0) 5px 5px 10px 5px; 
+    background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%);   
+    border: 2px solid rgb(28, 110, 164); 
+}
+
+.card {
+    box-shadow: rgb(0, 0, 0) 5px 5px 10px 5px;
+    border: 2px solid rgb(28, 110, 164); 
+}
+
+.delete-burger, .eat-burger {
+    float: right;
+}
+
 #dream-burger {
     /* background-image: url(../img/burger_bg2.jpg); */
-    background-image: url(../img/burger_bg4.jpg);
+    background-image: url(../img/cloud1.jpg);
     background-size: cover;
-    color: #c5331b;
+    /* color: #c5331b; */
+    /* background-color: #afd2e5; */
 }
 
 #header h1{
-    color: #ffc100;
+    /* color: #ffc100; */
+    color:#afd2e5;
     font-size: 60px;
 }
 
-#plate-img {
+#burger-img {
     height: 300px;
 }
 

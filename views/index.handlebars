@@ -8,18 +8,6 @@
         <div class="row text-center">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                {{!-- <div class="jumbotron jumbotron-fluid">
-                    <div class="container">
-                        <form class="create-form" action="/api/burgers" method="POST">
-                            <div class="form-group">
-                                <h3 class="card-title">Dream-Da-Burger</h3>
-                                <br>
-                                <input type="text" id="da-burger" name="name" size="50" maxlength="255">
-                            </div>
-                            <button type="submit">Cook-Da-Burger</button>
-                        </form>
-                    </div>
-                </div> --}}
                 <div class="card mt-3 mb-3" id="dream-burger" style="width: 100%;">
                     <div class="card-body">
                         <form class="create-form" action="/api/burgers" method="POST">
@@ -28,8 +16,8 @@
                                 <br>
                                 <input type="text" id="da-burger" name="name" size="auto" maxlength="255">
                             </div>
-                            <button type="submit">Cook-Da-Burger</button>
-                        </form>                   
+                            <button type="submit" class="burger-button">Cook-Da-Burger</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -40,20 +28,18 @@
         <div class="row text-center">
             <div class="col-sm-6">
                 <div class="card mt-3" style="width: 100%;">
-                    <img class="card-img-top" id="plate-img" src="/assets/img/eat-burger1.jpg" alt="Plate Image">
+                    <img class="card-img-top" id="burger-img" src="/assets/img/eat-burger1.jpg" alt="Plate Image">
                     <div class="card-body">
                         <h3 class="card-title">Eat-Da-Burger</h3>
                         <ul>
                             {{#each burgers}}
                             {{#unless this.devoured}}
-                            {{!-- <li> --}}<p>
-                                {{!-- <a class="eat-burger" data-id="{{id}}"> --}}
+                            <p>
                                 {{this.burger_name}}
-                                {{!-- </a> --}}
-                                <button class="eat-burger" data-id="{{id}}">
+                                <button class="eat-burger burger-button" data-id="{{id}}">
                                     Um-Num!
                                 </button>
-                                {{!-- </li> --}}</p>
+                            </p>
                             {{/unless}}
                             {{/each}}
                         </ul>
@@ -68,12 +54,12 @@
                         <ul>
                             {{#each burgers}}
                             {{#if this.devoured}}
-                            <li>
+                            <p>
                                 {{this.burger_name}}
-                                <button class="delete-burger" data-id="{{id}}">
+                                <button class="delete-burger burger-button" data-id="{{id}}">
                                     Burp!
                                 </button>
-                            </li>
+                            </p>
                             {{/if}}
                             {{/each}}
                         </ul>
